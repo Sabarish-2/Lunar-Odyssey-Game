@@ -7,17 +7,30 @@ public class colorChange : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        GetComponent<Renderer>().material.color = Color.red;
+        if (gameObject.name.Equals("Player"))
+            GetMaterial().color = Color.red;
+        if (gameObject.name.Equals("Platform"))
+            GetMaterial().color = Color.green;
+        //Debug.Log(GetComponents<Renderer>());
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        //Debug.Log(message: gameObject.tag);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        GetComponent<Renderer>().material.color = Color.blue;
+        if (gameObject.name.Equals("Player"))
+            GetMaterial().color = Color.blue;
+
+        if (gameObject.name.Equals("Platform"))
+            GetMaterial().color = Color.black;
+
+    }
+    Material GetMaterial()
+    {
+        return GetComponent<Renderer>().material;
     }
 }
