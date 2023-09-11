@@ -16,6 +16,7 @@ public class PlayerCollision : MonoBehaviour
 
             playerMovement.enabled = false;
 
+            FindObjectOfType<GameManager>().GameOver();
         }
     }
 
