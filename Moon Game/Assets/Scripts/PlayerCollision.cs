@@ -3,7 +3,7 @@ using UnityEngine;
 public class PlayerCollision : MonoBehaviour
 {
 
-    //public Transform Transform;
+    public Rigidbody rigidBody;
     public PlayerMovement playerMovement;
     public Vector3 offset;
 
@@ -17,6 +17,16 @@ public class PlayerCollision : MonoBehaviour
             playerMovement.enabled = false;
 
             FindObjectOfType<GameManager>().GameOver();
+        }
+
+    }
+
+    private void OnTriggerEnter(Collider collisionInfo)
+    {
+        if (collisionInfo.tag == "Finish")
+        {
+            //Debug.Log("Ok");
+            rigidBody.velocity = Vector3.zero;
         }
     }
 
