@@ -11,13 +11,14 @@ public class GameManager : MonoBehaviour
 
     public void LevelEnd()
     {
-        Debug.Log("You Did It!");
+        //Debug.Log("You Did It!");
         Invoke("NextLevel", RestartDelay);
 
     }
 
     public void NextLevel()
     {
+        PlayerPrefs.SetInt("Active", 1);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
     public void GameOver()
@@ -25,14 +26,13 @@ public class GameManager : MonoBehaviour
         if (GameEnd == false)
         {
             GameEnd = true;
-
-            //Quiz
             Invoke("Restart", RestartDelay);
         }
     }
 
     void Restart()
     {   
+        PlayerPrefs.SetInt("Active", 1);
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }

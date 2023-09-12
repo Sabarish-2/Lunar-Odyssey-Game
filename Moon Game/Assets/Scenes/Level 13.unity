@@ -7409,6 +7409,8 @@ MonoBehaviour:
   rigidBody: {fileID: 1690611773}
   playerMovement: {fileID: 1690611775}
   offset: {x: 0, y: 0, z: 5}
+  scoreText: {fileID: 217015082}
+  scorePart: {fileID: 1174031858}
 --- !u!1001 &1690822990
 PrefabInstance:
   m_ObjectHideFlags: 0

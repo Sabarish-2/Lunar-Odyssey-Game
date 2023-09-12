@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 
 public class PlayerCollision : MonoBehaviour
@@ -6,6 +7,8 @@ public class PlayerCollision : MonoBehaviour
     public Rigidbody rigidBody;
     public PlayerMovement playerMovement;
     public Vector3 offset;
+    public TextMeshProUGUI scoreText;
+    public TextMeshProUGUI scorePart;
 
     private void OnCollisionEnter (Collision collisionInfo)
     {
@@ -15,6 +18,11 @@ public class PlayerCollision : MonoBehaviour
             transform.position = transform.position - offset;
 
             playerMovement.enabled = false;
+            PlayerPrefs.SetInt("Active", 0);
+            int Score = PlayerPrefs.GetInt("Score");
+            PlayerPrefs.SetInt("Score", Score - 50);
+            scorePart.text = "Try ";
+            scoreText.text = "Again...";
 
             FindObjectOfType<GameManager>().GameOver();
         }
@@ -25,7 +33,11 @@ public class PlayerCollision : MonoBehaviour
     {
         if (collisionInfo.tag == "Finish")
         {
-            //Debug.Log("Ok");
+            PlayerPrefs.SetInt("Active", 0);
+            int Score = PlayerPrefs.GetInt("Score");
+            PlayerPrefs.SetInt("Score", Score + 100);
+            scorePart.text = "Level";
+            scoreText.text = "Complete!";
             rigidBody.velocity = Vector3.zero;
         }
     }
