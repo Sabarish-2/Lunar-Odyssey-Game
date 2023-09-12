@@ -948,8 +948,61 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1690611772}
+    - target: {fileID: 2332991073166707669, guid: 68869e498db93a94f982b71eab3480bd, type: 3}
+      propertyPath: m_text
+      value: "<- or 'a' to Go Left \n-> or 'd' to Go Right\nAvoid Rocks!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2332991073166707669, guid: 68869e498db93a94f982b71eab3480bd, type: 3}
+      propertyPath: m_fontSize
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 2332991073166707669, guid: 68869e498db93a94f982b71eab3480bd, type: 3}
+      propertyPath: m_margin.y
+      value: -0.023118
+      objectReference: {fileID: 0}
+    - target: {fileID: 2332991073166707669, guid: 68869e498db93a94f982b71eab3480bd, type: 3}
+      propertyPath: m_margin.z
+      value: 0.33401105
+      objectReference: {fileID: 0}
+    - target: {fileID: 2332991073166707669, guid: 68869e498db93a94f982b71eab3480bd, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 2332991073166707669, guid: 68869e498db93a94f982b71eab3480bd, type: 3}
+      propertyPath: m_HorizontalAlignment
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5425876148621982422, guid: 68869e498db93a94f982b71eab3480bd, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 353.483
+      objectReference: {fileID: 0}
+    - target: {fileID: 5425876148621982422, guid: 68869e498db93a94f982b71eab3480bd, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 58.7079
+      objectReference: {fileID: 0}
+    - target: {fileID: 5425876148621982422, guid: 68869e498db93a94f982b71eab3480bd, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2.292147
+      objectReference: {fileID: 0}
+    - target: {fileID: 5425876148621982422, guid: 68869e498db93a94f982b71eab3480bd, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2.292147
+      objectReference: {fileID: 0}
+    - target: {fileID: 5425876148621982422, guid: 68869e498db93a94f982b71eab3480bd, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2.292147
+      objectReference: {fileID: 0}
+    - target: {fileID: 5425876148621982422, guid: 68869e498db93a94f982b71eab3480bd, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5425876148621982422, guid: 68869e498db93a94f982b71eab3480bd, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 155
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 2874134840415213090, guid: 68869e498db93a94f982b71eab3480bd, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 68869e498db93a94f982b71eab3480bd, type: 3}
