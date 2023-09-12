@@ -1303,6 +1303,10 @@ PrefabInstance:
       propertyPath: scoreText
       value: 
       objectReference: {fileID: 3003579731410463979}
+    - target: {fileID: 5137817934952913658, guid: 970e63a5ca622b74b97e0fcfee1f9c6e, type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5928318048351461203, guid: 970e63a5ca622b74b97e0fcfee1f9c6e, type: 3}
       propertyPath: m_Enabled
       value: 0
