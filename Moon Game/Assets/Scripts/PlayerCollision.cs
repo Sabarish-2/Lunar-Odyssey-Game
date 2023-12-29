@@ -25,6 +25,9 @@ public class PlayerCollision : MonoBehaviour
             scoreText.text = "Again...";
 
             FindObjectOfType<GameManager>().GameOver();
+        } else if (collisionInfo.collider.tag == "Final rock")
+        {
+            playerMovement.enabled = false;
         }
 
     }
