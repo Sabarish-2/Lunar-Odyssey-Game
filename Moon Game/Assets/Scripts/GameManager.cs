@@ -6,8 +6,57 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     bool GameEnd = false;
+    bool isPaused = false;
+
 
     public float RestartDelay= 1f;
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            TogglePause();
+        }
+
+        if (isPaused)
+        {
+            if (Input.GetKeyDown(KeyCode.R))
+            {
+                RestartLevel();
+                TogglePause();
+            }
+
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                QuitGame();
+            }
+        }
+    }
+
+    void TogglePause()
+    {
+        isPaused = !isPaused;
+
+        if (isPaused)
+        {
+            Time.timeScale = 0f; // Pause the game by setting time scale to 0
+        }
+        else
+        {
+            Time.timeScale = 1f; // Resume the game by setting time scale back to 1
+        }
+    }
+
+    void RestartLevel()
+    {
+        PlayerPrefs.SetInt("Active", 1);  // Y?
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    void QuitGame()
+    {
+        Application.Quit();
+    }
 
     public void LevelEnd()
     {
